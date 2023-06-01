@@ -23,8 +23,12 @@ public class Configuration extends WebSecurityConfigurerAdapter {
         http.authorizeRequests(requests -> requests.antMatchers("/").permitAll()
                 .antMatchers("/check_loan").hasAuthority("manager")
                 .antMatchers("/check_balance").hasAnyAuthority("customer", "manager")
-                .anyRequest().authenticated()).formLogin(withDefaults()).rememberMe(withDefaults()).logout(withDefaults()).exceptionHandling(handling -> handling.accessDeniedPage("/acc_denined"))
-        .sessionManagement(management -> management.maximumSessions(2).maxSessionsPreventsLogin(true).expiredUrl("/session_timeout"));
+                .anyRequest().authenticated())
+                .formLogin(withDefaults())
+                .rememberMe(withDefaults())
+                .logout(withDefaults())
+       .exceptionHandling(handling -> handling.accessDeniedPage("/acc_denined"))
+      .sessionManagement(management -> management.maximumSessions(2).maxSessionsPreventsLogin(true).expiredUrl("/session_timeout"));
 		    
 	}
 }
