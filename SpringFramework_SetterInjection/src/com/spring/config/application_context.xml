@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Dependent Spring Bean conf -->
+	<bean id="dt" class="java.util.Date">
+	</bean>
+	<!-- Target spring bean conf -->
+	<bean id="wmg" class="com.spring.bean.WishMessageGenerator">
+		<property name="date" ref="dt" />
+	</bean>
+
+</beans>

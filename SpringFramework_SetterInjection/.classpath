@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/Jars/spring-framework-4.1.4.RELEASE-dist/spring-framework-4.1.4.RELEASE/libs/spring-aop-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Jars/spring-framework-4.1.4.RELEASE-dist/spring-framework-4.1.4.RELEASE/libs/spring-aspects-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Jars/spring-framework-4.1.4.RELEASE-dist/spring-framework-4.1.4.RELEASE/libs/spring-beans-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Jars/spring-framework-4.1.4.RELEASE-dist/spring-framework-4.1.4.RELEASE/libs/spring-context-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Jars/spring-framework-4.1.4.RELEASE-dist/spring-framework-4.1.4.RELEASE/libs/spring-context-support-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Jars/spring-framework-4.1.4.RELEASE-dist/spring-framework-4.1.4.RELEASE/libs/spring-core-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Jars/spring-framework-4.1.4.RELEASE-dist/spring-framework-4.1.4.RELEASE/libs/spring-expression-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Jars/spring-framework-4.1.4.RELEASE-dist/spring-framework-4.1.4.RELEASE/libs/spring-instrument-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Jars/commons-logging-1.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

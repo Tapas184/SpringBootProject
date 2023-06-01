@@ -1,0 +1,22 @@
+{"properties": [
+  {
+    "name": "food.idly",
+    "type": "java.lang.String",
+    "description": "A description for 'food.idly'"
+  },
+  {
+    "name": "food.idly",
+    "type": "java.lang.String",
+    "description": "A description for 'food.idly'"
+  },
+  {
+    "name": "food.total.gst",
+    "type": "java.lang.String",
+    "description": "A description for 'food.total.gst'"
+  },
+  {
+    "name": "food.idly",
+    "type": "java.lang.String",
+    "description": "A description for 'food.idly'"
+  }
+]}
