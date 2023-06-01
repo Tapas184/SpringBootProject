@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Configure dependent class -->
+	<bean id = "dtdc" class="com.nt.component.DTDC"/>
+	<bean id = "bdart" class="com.nt.component.BlueDart"/>
+	
+	<!-- Configure target class -->
+	<bean id = "fqkt"  class="com.nt.component.Flipkart"> 
+	    <property name="courior" ref="dtdc"/>
+	</bean>
+	
+
+</beans>

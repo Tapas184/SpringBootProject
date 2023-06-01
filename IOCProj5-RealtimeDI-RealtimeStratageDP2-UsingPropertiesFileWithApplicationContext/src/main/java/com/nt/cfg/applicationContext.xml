@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+<bean id="dmds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+
+        <property name="driverClassName"  value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.user}"/>
+        <property name="password" value="${jdbc.password}"/>
+</bean>
+<!-- DAO Class configuration -->
+<bean id="custDao" class="com.nt.dao.CustomerDAOImpl">
+        <constructor-arg  ref="dmds"/>
+</bean>
+<!-- Service Class Configuration -->
+<bean id= "custService" class="com.nt.service.CustomerService">
+      <constructor-arg  ref="custDao"/>
+</bean>
+<!-- Controller conf -->
+<bean id="controller" class="com.nt.controller.MainController">
+       <constructor-arg ref="custService"/>
+</bean>
+<!-- Configure properties file to bean -->
+<context:property-placeholder location="com/nt/properties/jdbc.properties"/>
+</beans>

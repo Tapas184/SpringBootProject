@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	 https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	
+<bean id="dmds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+
+        <property name="driverClassName"  value="oracle.jdbc.driver.OracleDriver"/>
+        <property name="url" value="jdbc:oracle:thin:@localhost:1521:ORCL"/>
+        <property name="username" value="c##tapasrout"/>
+        <property name="password" value="routtapas1"/>
+</bean>
+<!-- DAO Class configuration -->
+<bean id="custDao" class="com.nt.dao.CustomerDAOImpl">
+        <constructor-arg  ref="dmds"/>
+</bean>
+<!-- Service Class Configuration -->
+<bean id= "custService" class="com.nt.service.CustomerService">
+      <constructor-arg  ref="custDao"/>
+</bean>
+<!-- Controller conf -->
+<bean id="controller" class="com.nt.controller.MainController">
+       <constructor-arg ref="custService"/>
+</bean>
+</beans>
