@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+    <!-- Default Main Template -->
+    <definition name="mainTemplate" template="/WEB-INF/pages/layout.jsp">
+        <put-attribute name="title" value="" type="string" />
+        <put-attribute name="header" value="/WEB-INF/pages/header.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/pages/footer.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/pages/menu.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="add" value="/WEB-INF/pages/add.jsp" />
+    </definition>
+ <!-- For Body area Home Page presentation -->
+    <definition name="homepage" extends="mainTemplate">
+    <put-attribute name="title" value="HomePage" type="string" />
+        <put-attribute name="body" value="/WEB-INF/pages/home.jsp" />
+    </definition>
+ <!-- For Body area Customer Details presentation -->
+    <definition name="custinfo" extends="mainTemplate">
+    <put-attribute name="title" value="CustomerDetails" type="string" />
+        <put-attribute name="body" value="/WEB-INF/pages/body.jsp" />
+    </definition>
+    <!-- body For intrest calculation  -->
+    <definition name="intrestcal" extends="mainTemplate">
+    <put-attribute name="title" value="IntrestCalculation" type="string" />
+        <put-attribute name="body" value="/WEB-INF/pages/intrest.jsp" />
+    </definition>
+    <!-- Body for Services which we are offering -->
+    <definition name="offers" extends="mainTemplate">
+    <put-attribute name="title" value="ServiceOfferd" type="string" />
+        <put-attribute name="body" value="/WEB-INF/pages/offers.jsp" />
+    </definition>
+    
+</tiles-definitions>
