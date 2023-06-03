@@ -41,7 +41,7 @@ public class MysqlDSConfig {
 	LocalContainerEntityManagerFactoryBean 
 	createLCEMFB(EntityManagerFactoryBuilder builder) {
 		//create map object having hibernate properties
-		Map<String,Object> pros = new HashMap();
+		Map<String,Object> pros = new HashMap<>();
 				pros.put("hibernate.dilect", "org.hibernate.dialect.MYSQL8Dialect");
 		        pros.put("hibernate.hbm2ddl.auto", "update");
 		return builder.dataSource(createMysqlDs())

@@ -44,7 +44,7 @@ public class OracleDSConfig {
 	LocalContainerEntityManagerFactoryBean 
 	createLCEMFB(EntityManagerFactoryBuilder builder) {
 		//create map object having hibernate properties
-		Map<String,Object> pros = new HashMap();
+		Map<String,Object> pros = new HashMap<>();
 				pros.put("hibernate.dilect", "org.hiernate.dialect.Oracle10gDialect");
 		pros.put("hibernate.hbm2ddl.auto", "update");
 		return builder.dataSource(createOracleDs())

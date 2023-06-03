@@ -1,7 +1,5 @@
 package com.nt.model.product;
 
-import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,7 +17,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @NoArgsConstructor
 @Table(name = "MDS_PRODUCT")
-public class Product implements Serializable {
+public class Product  {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
