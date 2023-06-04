@@ -1,7 +1,5 @@
 package com.nt.process;
 
-import javax.sql.DataSource;
-
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.stereotype.Component;
 

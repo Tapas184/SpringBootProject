@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class JobMonitoringListner implements JobExecutionListener {
 
-	private Long start,end;
+	private Long start;
 	@Override
 	public void beforeJob(JobExecution jobExecution) {
 		start=System.currentTimeMillis();
@@ -18,7 +18,7 @@ public class JobMonitoringListner implements JobExecutionListener {
 
 	@Override
 	public void afterJob(JobExecution jobExecution) {
-		end=System.currentTimeMillis();
+	   long	end=System.currentTimeMillis();
 		System.out.println("End job :"+new Date());
 		System.out.println("Time: "+(end-start));
 		

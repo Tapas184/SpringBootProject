@@ -38,8 +38,7 @@ public class MysqlDSConfig {
 	//configure LocalContainerEntityManagerFactoryBean
 	@Bean(name = "mysqlEntityManagerFactoryBean")
 	
-	LocalContainerEntityManagerFactoryBean 
-	createLCEMFB(EntityManagerFactoryBuilder builder) {
+	LocalContainerEntityManagerFactoryBean createLCEMFB(EntityManagerFactoryBuilder builder) {
 		//create map object having hibernate properties
 		Map<String,Object> pros = new HashMap<>();
 				pros.put("hibernate.dilect", "org.hibernate.dialect.MYSQL8Dialect");
