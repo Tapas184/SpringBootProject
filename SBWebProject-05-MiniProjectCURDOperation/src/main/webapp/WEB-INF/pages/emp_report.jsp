@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page isELIgnored="false"%>
-<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="f"%>
+<%@taglib uri="http://java.sun.com/jstl/core_rt" prefix="f" %>
 <h1
 	style="color: orange; text-align: center; text-decoration: underline;">
 	Employee Details</h1>
@@ -21,10 +21,10 @@
 					<td>${emp.ename}</td>
 					<td>${emp.sal}</td>
 					<td>${emp.job}</td>
-					<td>&nbsp;<a href="edit?empno=${emp.empno}"><img
-							src="logo/edit.png" height="30" width="40"></a>&nbsp;&nbsp; <a
-						 href="delete?empno=${emp.empno}" onclick="return confirm('Do you want to delete thsis id :: ${emp.empno}')" ><img src="logo/delete.png"
-							height="30" width="40"></a>
+					<td>&nbsp;<a href="edit?empno=${emp.empno}">
+					<img src="logo/edit.png" height="30" width="40"></a>&nbsp;&nbsp; 
+					<a href="delete?empno=${emp.empno}" onclick="return confirm('Do you want to delete thsis id :: ${emp.empno}')" >
+					<img src="logo/delete.png"height="30" width="40"></a>
 					</td>
 				</tr>
 
