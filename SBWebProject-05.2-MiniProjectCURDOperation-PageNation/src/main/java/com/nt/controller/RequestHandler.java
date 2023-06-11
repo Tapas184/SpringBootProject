@@ -2,6 +2,8 @@ package com.nt.controller;
 
 import java.util.Map;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -19,7 +21,6 @@ import com.nt.model.EmployeeModel;
 import com.nt.service.IEmployeeService;
 import com.nt.validator.EmployeeFormValidator;
 
-import jakarta.servlet.http.HttpSession;
 
 @Controller
 //request handler class for all request(get/post)
