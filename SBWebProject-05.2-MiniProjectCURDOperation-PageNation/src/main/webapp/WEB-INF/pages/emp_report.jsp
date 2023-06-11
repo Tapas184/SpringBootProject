@@ -2,14 +2,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page isELIgnored="false"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="f"%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="f" %>
 <h1
 	style="color: orange; text-align: center; text-decoration: underline;">
 	Employee Details</h1>
 <f:choose>
 	<f:when test="${!empty pagedata}">
-		<table border="1" align="center" bgcolor="pink">
-			<tr bgcolor="yellow">
+		<table border="1" style="background-color: pink; margin: auto;">
+		  <caption>Employee Report</caption>
+			<tr style="background-color: yellow;">
 				<th>EmpNo</th>
 				<th>EmpName</th>
 				<th>Salary</th>
@@ -37,9 +38,9 @@
 		<h2 style="color: red; text-align: center">Record Not Found</h2>
 	</f:otherwise>
 </f:choose>
-<blink>
-	<h5 style="color: red; text-align: center">${resultMsg}</h5>
-</blink>
+<div style="text-align: center;">
+	${resultMsg}
+</div>
 <hr>
 <p style="text-align: center;">
 	<f:if test="${!pagedata.isFirst()}">

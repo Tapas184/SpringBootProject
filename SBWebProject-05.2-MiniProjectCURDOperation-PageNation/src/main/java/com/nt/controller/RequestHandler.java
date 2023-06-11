@@ -83,14 +83,9 @@ public class RequestHandler {
 	 * result); //redirect for PostRedirect problem return "redirect:report"; }
 	 */
 	@PostMapping("/add")
-	public String inserTingEmployee(HttpSession ses, @ModelAttribute("emp") EmployeeModel emp, BindingResult errors) { // BindingResult
-																														// errors
-																														// instead
-																														// of
-																														// you
-																														// can
-																														// take
-																														// BindingException
+	public String inserTingEmployee(HttpSession ses, 
+			@ModelAttribute("emp") EmployeeModel emp, 
+			BindingResult errors) { // BindingResult																									// BindingException
 		// for Application about some logic(Application validation)
 		if (emp.getJob().equalsIgnoreCase("KING") || emp.getJob().equalsIgnoreCase("QUEEN")
 				|| emp.getJob().equalsIgnoreCase("president")) {

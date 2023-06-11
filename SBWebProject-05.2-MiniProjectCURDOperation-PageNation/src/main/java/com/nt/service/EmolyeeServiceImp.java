@@ -49,7 +49,6 @@ public class EmolyeeServiceImp implements IEmployeeService {
 			repo.deleteById(id);
 			return  id+" - Id  Employee details deleted";
 		}
-		else
 			
 		return id+" Is not availabe in data base";
 	}
