@@ -32,6 +32,7 @@ public class DemoController {
 		if(object.isPresent()) {
 			entity=object.get();
 		}
+		System.out.println(entity);
 		return ResponseEntity.ok(entity);
 	}
 }
