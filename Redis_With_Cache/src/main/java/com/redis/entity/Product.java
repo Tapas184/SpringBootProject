@@ -7,6 +7,10 @@ import org.springframework.data.redis.core.RedisHash;
 @RedisHash("product")
 public class Product implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3544562729034421400L;
 	private Integer id;
 	private String name;
 	private Integer qty;

@@ -25,8 +25,8 @@ public class Redisconfig {
 	}
 	@Bean
 	@Primary
-	 RedisTemplate<Object, ?> redisTemplate(){
-		RedisTemplate<Object, ?> template = new RedisTemplate<>();
+	 RedisTemplate<Object, Object> redisTemplate(){
+		RedisTemplate<Object, Object> template = new RedisTemplate<>();
 		template.setConnectionFactory(connectionFactory());
 		template.setKeySerializer(new StringRedisSerializer());
 		template.setHashKeySerializer(new StringRedisSerializer());
