@@ -35,9 +35,9 @@ public class RedisWithCacheApplication {
 	
 	@GetMapping
 	public List<Object> getAllProduct(){
-		
 		return repo.findAll();
 	}
+	
 	@DeleteMapping("/{id}")
 	@CacheEvict                      //This is used for delete the record from DB as well from cache.
 	                               //@CachePut( this is used for update in data base as well to save in cache)
