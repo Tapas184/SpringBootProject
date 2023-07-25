@@ -2,6 +2,7 @@ package com.redis;
 
 import java.util.List;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.redis.entity.Pojo;
 import com.redis.entity.Product;
 import com.redis.repository.ProductDAO;
 
@@ -51,6 +53,14 @@ public class RedisWithCacheApplication {
 		return repo.findById(id);
 	}
 	
+	@GetMapping("/pojo/{id}")
+	@Cacheable(value = "Pojo",key = "#id")
+	public Pojo getPojo(@PathVariable int id) {
+		Product prod = repo.findById(id);
+		Pojo pojo = new Pojo();
+		BeanUtils.copyProperties(prod, pojo);
+		return pojo;
+	}
 	public static void main(String[] args) {
 		SpringApplication.run(RedisWithCacheApplication.class, args);
 	}
