@@ -30,6 +30,7 @@ public class RedisWithCacheApplication {
 	@Autowired
 	private ProductDAO repo;
 	
+	
 	@PostMapping
 	public Product save(@RequestBody Product product) {
 		return repo.save(product);
@@ -48,13 +49,13 @@ public class RedisWithCacheApplication {
 	}
 
 	@GetMapping("/{id}")
-	@Cacheable(key = "#id",value = "Product") // we can use Unless for any condition if we want to pass
+	@Cacheable(key = "#id",value = "Product",cacheManager = "cacheManager") // we can use Unless for any condition if we want to pass
 	public Product getById(@PathVariable int  id) {
 		return repo.findById(id);
 	}
 	
 	@GetMapping("/pojo/{id}")
-	@Cacheable(value = "Pojo",key = "#id")
+	@Cacheable(value = "myCache",key = "#id",unless = "#result==null")
 	public Pojo getPojo(@PathVariable int id) {
 		Product prod = repo.findById(id);
 		Pojo pojo = new Pojo();
